@@ -15,7 +15,7 @@
             {{#each issues}}
                 <tr>
                     <td><a href="/issues/{{_id}}"></a>{{title}}</td>
-                    <td>{{formatDate createdAt 'Do MMM YYYY, h:mm:ss a'}}</td>
+                    <td>{{formatDate createdAt 'DD MMM YYYY, h:mma'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     {{!-- todo: delete --}}
                     <td></td> 
