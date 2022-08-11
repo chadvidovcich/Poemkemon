@@ -32,19 +32,12 @@ module.exports = function(passport) {
 
     })) 
 
-    passport.serializeUser((user, done) => {
-        process.nextTick(() => {
-          return done(null, {
-            id: user.id,
-            username: user.username,
-            picture: user.picture
-          });
-        });
-      });
-      
-      passport.deserializeUser((user, done) => {
-        process.nextTick(() => {
-          return done(null, user);
-        });
-      });
+    passport.serializeUser((user,done) => {
+      done(null,user.id)
+    });
+    passport.deserializeUser((id,done) => {
+      User.findById(id,(err, user) => {
+          done(err, user)
+      })
+    })
 }
