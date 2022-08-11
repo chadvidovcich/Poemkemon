@@ -13,7 +13,10 @@ router.get('/', ensureGuest, (req,res) => {
 // @desc    Dashboard
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, (req,res) => {
-    res.render('dashboard')
+    res.render('dashboard', {
+        name: req.user.displayName,
+        image: req.user.image,
+    })
 })
 
 module.exports = router
