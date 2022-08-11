@@ -1,3 +1,28 @@
 <h6>Dashboard</h6>
 <h3>Welcome {{name}}</h3>
-<p>Here are the bugs you've created</p>
+<p>Here are the issues you've created:</p>
+{{#if issues}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each issues}}
+                <tr>
+                    <td><a href="/issues/{{_id}}"></a>{{title}}</td>
+                    <td>{{formatDate createdAt 'Do MMM YYYY, h:mm:ss a'}}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    {{!-- todo: delete --}}
+                    <td></td> 
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>You have not created any issues</p>
+{{/if}}
