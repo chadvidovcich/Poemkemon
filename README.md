@@ -3,10 +3,13 @@
 
 Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.
 
-## Screenshots
-![App Screenshot](https://placedog.net/450?r)
 
-Please enjoy this image until project screenshots are completed.
+## Screenshots
+<img
+  src="./public/projectimage.png"
+  alt="App Screenshot"
+  title="App Screenshot"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 
 ## Tech Stack
@@ -14,12 +17,11 @@ Please enjoy this image until project screenshots are completed.
 Node.js, MongoDB, Express.js, Handlebars, Materialize CSS, Google OAuth 2.0
 
 
-
 ## Usage
 
 View the live deployment here:
 
-[Bug Eye Live Deployment](#)
+[Bug Eye Live Deployment](https://bug-eye.herokuapp.com/)
 
 
 ## Run Locally
@@ -94,5 +96,4 @@ My goal was to simulate a professional work environment.
     - I used issues, feature branches and Pull Requests along the way to keep track of my progress.
 
 I wanted to expand my technology knowledge by using new tools for this project. 
-Google OAuth 2.0 and handlebars had well-written documentation that made them easy to work with.
-In the future, I'd like to add the ability to sort issues by status, user, and date. This would make the UX faster and easier. 
+Google OAuth 2.0 and handlebars were new and had well-written documentation that made them easy to work with. 
