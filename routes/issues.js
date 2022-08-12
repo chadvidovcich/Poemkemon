@@ -46,12 +46,9 @@ router.get('/', ensureAuth, async (req,res) => {
 // @route   GET /issues/user/:userId
 router.get('/user/:userId', ensureAuth, async (req,res) => {
     try {
-        const issues = await Issue.find({
-            user: req.params.userId,
-            $or: [{ status: "Not Started" }, { status: "In Progress" }]
-        })
-        .populate('user')
-        .lean()
+        const issues = await Issue.find({ user: req.params.userId, $or: [{ status: "Not Started" }, { status: "In Progress" }] })
+            .populate('user')
+            .lean()
 
         res.render('issues/index', {
             issues
