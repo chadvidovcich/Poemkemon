@@ -4,7 +4,7 @@
   "description": "Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.",
   "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node app.js",
+    "start": "node app.js",
     "dev": "cross-env NODE_ENV=development nodemon app.js"
   },
   "author": "Chad Vidovcich",
