@@ -14,11 +14,20 @@
         <tbody>
             {{#each issues}}
                 <tr>
-                    <td><a href="/issues/{{_id}}"></a>{{title}}</td>
-                    <td>{{formatDate createdAt 'Do MMM YYYY, h:mm:ss a'}}</td>
+                    <td><a href="/issues/edit/{{_id}}"></a>{{title}}</td>
+                    <td>{{formatDate createdAt 'DD MMM YYYY, h:mma'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
-                    {{!-- todo: delete --}}
-                    <td></td> 
+                    <td>
+                        <a href="/issues/edit/{{_id}}" class="btn btn-float">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <form action="/issues/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn red" type="submit">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td> 
                 </tr>
             {{/each}}
         </tbody>
