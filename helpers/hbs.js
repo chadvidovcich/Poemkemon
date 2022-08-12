@@ -16,5 +16,28 @@ module.exports = {
     },
     stripTags: function (input) {
         return input.replace(/<(?:.|\n)*?>/gm, '')
-    }
+    },
+    editIcon: function (issueUser, loggedUser, issueId, floating = true) {
+        if (issueUser._id.toString() == loggedUser._id.toString()) {
+            if (floating) {
+                return `<a href="/issues/edit/${issueId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`
+            } else {
+                return `<a href="/issues/edit/${issueId}"><i class="fas fa-edit"></i></a>`
+            }
+        } else {
+            return ''
+        }
+    },
+    select: function (selected, options) {
+        return options
+            .fn(this)
+            .replace(
+                new RegExp(' value="' + selected + '"'),
+                '$& selected="selected"'
+            )
+            .replace(
+                new RegExp('>' + selected + '</option>'),
+                ' selected="selected"$&'
+            )
+    },
 }
