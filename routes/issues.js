@@ -42,6 +42,23 @@ router.get('/', ensureAuth, async (req,res) => {
     }
 })
 
+// @desc    Show user issues
+// @route   GET /issues/user/:userId
+router.get('/user/:userId', ensureAuth, async (req,res) => {
+    try {
+        const issues = await Issue.find({ user: req.params.userId, $or: [{ status: "Not Started" }, { status: "In Progress" }] })
+            .populate('user')
+            .lean()
+
+        res.render('issues/index', {
+            issues
+        })
+    } catch (err) {
+        console.error(err);
+        res.render('error/500')
+    }
+})
+
 // @desc    Show single issue
 // @route   GET /issues/:id
 router.get('/:id', ensureAuth, async (req,res) => {
