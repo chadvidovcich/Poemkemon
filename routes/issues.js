@@ -42,6 +42,27 @@ router.get('/', ensureAuth, async (req,res) => {
     }
 })
 
+// @desc    Show single issue
+// @route   GET /issues/:id
+router.get('/:id', ensureAuth, async (req,res) => {
+    try {
+        let issue = await Issue.findById(req.params.id)
+            .populate('user')
+            .lean()
+        
+        if(!issue) {
+            return res.render('error/404')
+        }
+
+        res.render('issues/show', {
+            issue
+        })
+    } catch (err) {
+        console.error(err);
+        res.render('error/500')
+    }
+})
+
 // @desc    Show issue edit page
 // @route   GET /issues/edit/:id
 router.get('/edit/:id', ensureAuth, async (req,res) => {
