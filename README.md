@@ -1,35 +1,31 @@
-
 # Bug Eye
 
 Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.
 
-
 ## Screenshots
+
 <img
   src="./public/projectimage.png"
   alt="App Screenshot"
   title="App Screenshot"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-
 ## Tech Stack
 
 Node.js, MongoDB, Express.js, Handlebars, Materialize CSS, Google OAuth 2.0
-
 
 ## Usage
 
 View the live deployment here:
 
-[Bug Eye Live Deployment](https://bug-eye.herokuapp.com/)
-
+[Bug Eye Live Deployment](https://bug-eye.onrender.com/)
 
 ## Run Locally
 
 **Requirements before starting:**
 
-  - [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
-  - [Google Oauth2.0 ClientID and Secret](https://console.cloud.google.com)
+- [MongoDB Atlas URI](https://www.mongodb.com/atlas/database)
+- [Google Oauth2.0 ClientID and Secret](https://console.cloud.google.com)
 
 Clone the project to your local environment
 
@@ -73,16 +69,13 @@ Start the server in production mode
   npm run start
 ```
 
-
 ## Authors
 
 - [@ChadVidovcich](https://www.github.com/chadvidovcich)
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Lessons Learned
 
@@ -90,10 +83,10 @@ My goal was to simulate a professional work environment.
 
     - I built a backend server using Express.
     - I integrated a database with my server using MongoDB.
-    - I utilized Google OAuth 2.0 for user authentication. 
+    - I utilized Google OAuth 2.0 for user authentication.
     - I built a frontend UI using Handlebars and Materialize CSS.
     - I wrote a clean and understandable readme with local installation instructions.
     - I used issues, feature branches and Pull Requests along the way to keep track of my progress.
 
-I wanted to expand my technology knowledge by using new tools for this project. 
-Google OAuth 2.0 and handlebars were new and had well-written documentation that made them easy to work with. 
+I wanted to expand my technology knowledge by using new tools for this project.
+Google OAuth 2.0 and handlebars were new and had well-written documentation that made them easy to work with.
