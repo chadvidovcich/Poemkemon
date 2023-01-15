@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-const Navbar = () => {
+const Navbar = ({ title }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <nav className="navigation">
       <a href="/" className="brand-name">
-        <h1>Bug Eye</h1>
+        <h1>{title}</h1>
       </a>
       <button
         className="hamburger"
@@ -34,6 +35,14 @@ const Navbar = () => {
       </div>
     </nav>
   );
+};
+
+Navbar.defaultProps = {
+  title: 'Bug Eye',
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default Navbar;
