@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Issues from './components/Issues';
+import AddIssue from './components/AddIssue';
 
 function App() {
   const [issues, setIssues] = useState([
@@ -31,6 +32,14 @@ function App() {
     },
   ]);
 
+  // Add Issue
+  const addIssue = (issue) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+
+    const newIssue = { id, ...issue };
+    setIssues([...issues, newIssue]);
+  };
+
   // Delete Issue
   const deleteIssue = (id) => {
     setIssues(issues.filter((issue) => issue.id !== id));
@@ -50,6 +59,7 @@ function App() {
       <Navbar />
       <div className="container">
         <Header />
+        <AddIssue onAdd={addIssue} />
         {issues.length > 0 ? (
           <Issues
             issues={issues}
