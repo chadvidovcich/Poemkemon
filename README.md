@@ -5,20 +5,20 @@ Bug Eye is an issue tracking system. It allows users to organize, submit, and vi
 ## Screenshots
 
 <img
-  src="./public/projectimage.png"
+  src="./server/public/projectimage.png"
   alt="App Screenshot"
   title="App Screenshot"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ## Tech Stack
 
-Node.js, MongoDB, Express.js, Handlebars, Materialize CSS, Google OAuth 2.0
+Node.js, MongoDB, Express.js, React, Google OAuth 2.0
 
 ## Usage
 
 View the live deployment here:
 
-[Bug Eye Live Deployment](https://bug-eye.onrender.com/)
+[Bug Eye Live Deployment](https://bug-eye.netlify.app/)
 
 ## Run Locally
 
@@ -84,9 +84,8 @@ My goal was to simulate a professional work environment.
     - I built a backend server using Express.
     - I integrated a database with my server using MongoDB.
     - I utilized Google OAuth 2.0 for user authentication.
-    - I built a frontend UI using Handlebars and Materialize CSS.
+    - I built a frontend client interface using React.
     - I wrote a clean and understandable readme with local installation instructions.
     - I used issues, feature branches and Pull Requests along the way to keep track of my progress.
 
 I wanted to expand my technology knowledge by using new tools for this project.
-Google OAuth 2.0 and handlebars were new and had well-written documentation that made them easy to work with.
