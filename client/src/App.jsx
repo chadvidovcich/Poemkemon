@@ -5,6 +5,7 @@ import Issues from './components/Issues';
 import AddIssue from './components/AddIssue';
 
 function App() {
+  const [showAddIssue, setShowAddIssue] = useState(false);
   const [issues, setIssues] = useState([
     {
       id: 1,
@@ -58,8 +59,11 @@ function App() {
     <div>
       <Navbar />
       <div className="container">
-        <Header />
-        <AddIssue onAdd={addIssue} />
+        <Header
+          onAdd={() => setShowAddIssue(!showAddIssue)}
+          showAdd={showAddIssue}
+        />
+        {showAddIssue && <AddIssue onAdd={addIssue} />}
         {issues.length > 0 ? (
           <Issues
             issues={issues}
