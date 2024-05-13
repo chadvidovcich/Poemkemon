@@ -1,6 +1,10 @@
 # Bug Eye
 
+Keep track of those pesky issues.
+
 Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.
+
+Stack: MongoDB, Express, Handlebars, Node, Google OAuth
 
 ## Screenshots
 
@@ -18,7 +22,7 @@ Node.js, MongoDB, Express.js, React, Google OAuth 2.0
 
 View the live deployment here:
 
-[Bug Eye Live Deployment](https://bug-eye.netlify.app/)
+[Bug Eye Live Deployment](https://bugeye.chadvidovcich.com/)
 
 ## Run Locally
 
