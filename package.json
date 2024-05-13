@@ -1,26 +1,15 @@
 {
-  "name": "bug-eye",
-  "version": "1.0.0",
-  "description": "Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.",
-  "main": "index.js",
-  "scripts": {
-    "client": "cd client && npm start",
-    "server": "cd server && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chadvidovcich/bug-eye.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chadvidovcich/bug-eye/issues"
-  },
-  "homepage": "https://github.com/chadvidovcich/bug-eye#readme",
-  "devDependencies": {
-    "concurrently": "^7.6.0"
-  }
+	"name": "bug-eye",
+	"version": "1.0.0",
+	"description": "Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.",
+	"main": "index.js",
+	"scripts": {
+		"client": "cd client && npm start",
+		"server": "cd server && npm run dev",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"concurrently": "^7.6.0"
+	}
 }
