@@ -20,7 +20,7 @@ Node.js, MongoDB, Express.js, Handlebars, Materialize CSS, Google OAuth 2.0
 
 View the live deployment here:
 
-[Bug Eye Live Deployment](https://bug-eye.onrender.com/)
+[Bug Eye Live Deployment](https://bugeye.chadvidovcich.com/)
 
 ## Run Locally
 
