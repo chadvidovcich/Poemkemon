@@ -1,6 +1,8 @@
 # Bug Eye
 
-Bug Eye is an issue tracking system. It allows users to organize, submit, and view issues.
+Keep track of those pesky issues.
+
+Bug Eye is an issue-tracking system. It allows users to organize, submit, and view issues.
 
 ## Screenshots
 
